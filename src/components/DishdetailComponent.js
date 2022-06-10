@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
 
@@ -9,6 +9,14 @@ class DishDetail extends Component {
         this.state = {
             selectedDish: this.props.dsDetail
         }
+    }
+
+    componentDidMount() { 
+        console.log('DishDetail Component componentDidMount invoked');
+    }
+
+    componentDidUpdate() {
+        console.log('DishDetail component componentDidUpdate invoked');
     }
 
     renderDish(dish) {
@@ -62,6 +70,9 @@ class DishDetail extends Component {
     }
 
     render() {
+
+        console.log('DishDetail component render invoked');
+
         const dish = this.props.dish;
 
         if(dish == null) {
