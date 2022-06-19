@@ -18,14 +18,12 @@ class Main extends Component {
     };
   }
 
-  const HomePage = () => {
-    return(
-        <Home 
-        />
-    );
-  }
-
   render() {
+    const HomePage = () => {
+      return(
+          <Home/>
+      );
+    }
     return (
       <div>
         <Header />
